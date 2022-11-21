@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Lena</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <array name="menuOptions">
+        <item>Home</item>
+        <item>Personal</item>
+        <item>High scores</item>
+        <item>Settings</item>
+        <item>About</item>
+    </array>
 </resources>
