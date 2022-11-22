@@ -24,14 +24,13 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_300sdp"
-            android:background="@color/black"
+            android:layout_height="wrap_content"
             android:layout_centerVertical="true">
 
             <LinearLayout
                 android:id="@+id/duo_view_menu_options_layout"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_300sdp"
+                android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:orientation="vertical"/>
         </ScrollView>
