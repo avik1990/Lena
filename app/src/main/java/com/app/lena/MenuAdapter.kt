@@ -46,7 +46,7 @@ internal class MenuAdapter(options: ArrayList<String>) : BaseAdapter() {
         }
 
         // Using the DuoOptionView's default selectors
-        optionView.bind(option, null, null)
+        optionView.bind(position,option, null, null)
 
         // Adding the views to an array list to handle view selection
         mOptionViews.add(optionView)

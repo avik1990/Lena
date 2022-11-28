@@ -5,9 +5,11 @@
 
     <array name="menuOptions">
         <item>Home</item>
-        <item>Personal</item>
-        <item>High scores</item>
-        <item>Settings</item>
-        <item>About</item>
+        <item>Categories</item>
+        <item>Find Store</item>
+        <item>My Cart</item>
+        <item>My Profile</item>
+        <item>My Wishlist</item>
+        <item>Logout</item>
     </array>
 </resources>

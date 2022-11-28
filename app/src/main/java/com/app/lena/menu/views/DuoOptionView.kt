@@ -3,12 +3,14 @@ package com.app.lena.menu.views
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.app.lena.R
+
 
 class DuoOptionView @JvmOverloads constructor(
     context: Context?,
@@ -118,11 +120,12 @@ class DuoOptionView @JvmOverloads constructor(
      *
      * @param optionText Text to show as option in the menu.
      */
-    fun bind(optionText: String?) {
+    /*fun bind(optionText: String?) {
         mOptionViewHolder!!.mTextViewOption.text = optionText
+        Log.e("Rshjbshjfs",optionText.toString() +"   counter"+ count)
         mOptionViewHolder!!.mTextViewOption.alpha = ALPHA_UNCHECKED
         mOptionViewHolder!!.mImageViewSelector.visibility = GONE
-    }
+    }*/
 
     /**
      * Binds the option view with it's content
@@ -132,7 +135,7 @@ class DuoOptionView @JvmOverloads constructor(
      * Set to "null" to use it's default.
      * By default it shows a white circle.
      */
-    fun bind(optionText: String?, selectorDrawable: Drawable?) {
+   /* fun bind(optionText: String?, selectorDrawable: Drawable?) {
         mOptionViewHolder!!.mTextViewOption.text = optionText
         mOptionViewHolder!!.mTextViewOption.alpha = ALPHA_UNCHECKED
         if (selectorDrawable != null) {
@@ -140,7 +143,7 @@ class DuoOptionView @JvmOverloads constructor(
         }
         mOptionViewHolder!!.mImageViewSelector.alpha = ALPHA_UNCHECKED
         isSelectorEnabled = true
-    }
+    }*/
 
     /**
      * Binds the option view with it's content
@@ -153,8 +156,18 @@ class DuoOptionView @JvmOverloads constructor(
      * Set to "null" to use it's default.
      * By default it shows a red rectangle.
      */
-    fun bind(optionText: String?, selectorDrawable: Drawable?, selectorSideDrawable: Drawable?) {
+    fun bind(position:Int, optionText: String?, selectorDrawable: Drawable?, selectorSideDrawable: Drawable?) {
+        var myImageList = intArrayOf(
+            R.drawable.ic_home,
+            R.drawable.ic_categories,
+            R.drawable.ic_find_store,
+            R.drawable.ic_cart,
+            R.drawable.ic_profile,
+            R.drawable.ic_wishlist,
+            R.drawable.ic_logout)
+
         mOptionViewHolder!!.mTextViewOption.text = optionText
+        mOptionViewHolder!!.mImageViewSelector.setImageResource(myImageList[position])
         mOptionViewHolder!!.mTextViewOption.alpha = ALPHA_UNCHECKED
         if (selectorDrawable != null) {
             mOptionViewHolder!!.mImageViewSelector.setImageDrawable(selectorDrawable)
